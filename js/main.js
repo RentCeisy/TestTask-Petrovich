@@ -5,15 +5,15 @@ $(document).ready(function() {
         $.ajax({
             url: 'controller.php',
             method: 'POST',
+            dataType: 'json',
             data: {
                 url,
             },
             success(response) {
-                console.log(response);
+                $('.msg').html(response.result);
             },
             error(response) {
-                console.log(response);
-
+                $('.msg').html('Something went wrong...');
             }
         })
     })

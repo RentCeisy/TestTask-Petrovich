@@ -17,8 +17,9 @@
             <input type="text" id="url" name="url" class="form-control" placeholder="Enter Url">
         </div>
         <button type="submit" id="sendData" class="btn btn-primary">Отправить</button>
-        <div class="msg"></div>
+
     </form>
+    <div class="msg"></div>
 </div>
 <script src="js/main.js"></script>
 </body>

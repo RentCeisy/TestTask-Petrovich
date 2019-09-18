@@ -2,8 +2,6 @@
 
 use Database\DBHelper;
 
-require_once 'Database/DB.php';
-require_once 'Database/DBHelper.php';
 $url = $_POST['url'];
 $db = new DBHelper();
 if(isset($url) && !empty($url)) {
@@ -12,7 +10,8 @@ if(isset($url) && !empty($url)) {
     echo json_encode(['result' => 'What a fuck, url is empty!']);
 }
 
-function create_url($url, $db) {
+function create_url($url, $db) 
+{
     $url = trim(strtolower($url));
     if(false !== strpos($url,'http://') || false !== strpos($url, 'https://')) {
 
